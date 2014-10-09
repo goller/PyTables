@@ -110,7 +110,6 @@ def check_import(pkgname, pkgver):
           % {'pkgname': pkgname, 'pkgver': mod.__version__})
     globals()[pkgname] = mod
 
-check_import('numpy', min_numpy_version)
 # Check for numexpr only if not using setuptools (see #298)
 if not has_setuptools:
     check_import('numexpr', min_numexpr_version)
