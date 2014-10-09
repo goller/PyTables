@@ -13,13 +13,8 @@ import subprocess
 from os.path import exists, expanduser
 import glob
 
-# Using ``setuptools`` enables lots of goodies, such as building eggs.
-if 'FORCE_SETUPTOOLS' in os.environ:
-    from setuptools import setup, find_packages
-    has_setuptools = True
-else:
-    from distutils.core import setup
-    has_setuptools = False
+from setuptools import setup, find_packages
+has_setuptools = True
 
 from distutils.core import Extension
 from distutils.dep_util import newer
